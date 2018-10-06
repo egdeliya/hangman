@@ -35,6 +35,6 @@ setup(
         "Programming Language :: Python :: 3",
     ],
     entry_points={
-            'console_scripts': ['hangman=hangman.hangman:hangman'],
+        'console_scripts': ['hangman=hangman.hangman:hangman'],
         }
 )

@@ -11,7 +11,8 @@ def game_loop(max_tries, words):
     get_current_state = get_state(word)
 
     while wasted_tries < max_tries:
-        letter = input("Guess a letter:\n")
+        print("Guess a letter:")
+        letter = input()
 
         (is_in_word, game_is_won) = checker(letter)
 
@@ -56,7 +57,7 @@ def check_letter(word):
             letters_counter.pop(letter)
             accepted_letter = True
 
-            if len(letters_counter) == 0:
+            if not letters_counter:
                 game_is_won = True
 
         return accepted_letter, game_is_won
@@ -71,7 +72,7 @@ def print_game_result(game_is_won):
         print("You lost!")
 
 
-def hangman(words=["hello", "world"]):
+def hangman(words=("hello", "world")):
     max_tries = 5
     words = words
 
