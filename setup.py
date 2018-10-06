@@ -18,7 +18,7 @@ setup(
     setup_requires=[
         "pytest-runner",
         "pytest-pylint",
-        "pytest-pycodestyle",
+        "pytest-codestyle",
         "pytest-pep257",
         "pytest-cov",
     ],
